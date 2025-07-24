@@ -1,0 +1,511 @@
+body {
+  margin: 0;
+  background-color: black;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+/* Fondo barras tipo Cherry */
+.cherry-background {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.cherry-bars {
+  display: flex;
+  gap: 30px;
+  padding-top: 120px;
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+}
+
+.bar {
+  width: 50px;
+  height: 0;
+  background-color: rgba(255, 200, 200, 0.15);
+  border-radius: 6px;
+  animation: rise 2s ease-out forwards;
+}
+
+@keyframes rise {
+  to {
+    height: 100vh;
+  }
+}
+
+/* NAVBAR */
+.custom-navbar {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  z-index: 2;
+  position: relative;
+}
+
+.nav-item {
+  padding: 10px 20px;
+  border: 2px solid red;
+  border-radius: 40px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none !important
+}
+
+/* Título e Imagen */
+.about-header {
+  text-align: center;
+  margin-top: 60px;
+  z-index: 2;
+  position: relative;
+}
+
+.about-title {
+  width: 300px;
+  margin-bottom: 30px;
+}
+
+.photo-frame {
+  border: 4px solid red;
+  border-radius: 50%;
+  width: 230px;
+  height: 230px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-pic {
+  width: 100%;
+  height: auto;
+}
+
+/* Sección de habilidades */
+.skills-section {
+  padding: 120px 0 100px;
+  background-color: black;
+  text-align: center;
+}
+
+.skills-section h2 {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.skill-box {
+  border: 2px solid red;
+  padding: 20px 30px;
+  width: 250px;
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+}
+
+.skill-title {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: gray;
+}
+
+.skill-name {
+  font-size: 18px;
+  color: yellow;
+  font-weight: bold;
+}
+
+.skill-contact {
+  margin-top: 8px;
+  font-size: 12px;
+  color: white;
+}
+.skill-bottom {
+  margin-top: 40px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding-top: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skill-box {
+  border: 2px solid red;
+  border-radius: 20px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.skill-box:hover {
+  transform: scale(1.05);
+}
+
+.skill-title {
+  color: white;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.skill-name {
+  color: yellow;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.skill-contact {
+  color: white;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.centered-box {
+  margin-top: -10px;
+}
+.skills-section {
+  margin-top: 120px; /* Aquí ajustás qué tan abajo va todo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skills-title {
+  text-align: center;
+  font-size: 32px;
+  color: white;
+  margin-top: 100px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.quote-section {
+  margin-top: 120px; /* Subido un poco más */
+  margin-bottom: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 40vh; /* Altura ideal sin exagerar */
+}
+
+.quote-wrapper {
+  max-width: 800px;
+  position: relative;
+  text-align: center;
+}
+
+.quote-mark {
+  font-size: 70px;
+  color: red;
+  font-weight: bold;
+  position: absolute;
+}
+
+.quote-mark.left {
+  top: -20px;
+  left: -60px;
+}
+
+.quote-mark.right {
+  bottom: -20px;
+  right: -60px;
+}
+
+.quote-text p {
+  margin: 10px 0;
+  font-size: 40px;
+  color: white;
+  font-family: 'Arial Black', sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+
+.quote-text .soul {
+  color: red;
+}
+#skills-visual-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 140vh; /* o más si tu sección es alta */
+  pointer-events: none;
+  z-index: 0;
+}
+
+.skills-content {
+  position: relative;
+  z-index: 2;
+}
+.note-float-right {
+  position: absolute;
+  right: 8%;
+  bottom: 18vh;
+  font-size: 90px;
+  color: #ff0000;
+  text-shadow:
+    0 0 10px red,
+    0 0 20px red,
+    0 0 40px #ff3b3b,
+    0 0 80px #ff3b3b;
+  animation: floatNote 3s ease-in-out infinite;
+  z-index: 2;
+  pointer-events: none;
+}
+
+@keyframes floatNote {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.quote-section {
+  position: relative; /* para que la nota se posicione bien */
+  padding-bottom: 100px;
+}
+.dollar-float-left {
+  position: absolute;
+  left: 8%;
+  bottom: 18vh;
+  font-size: 90px;
+  color: #ff0000;
+  text-shadow:
+    0 0 10px red,
+    0 0 20px red,
+    0 0 40px #ff3b3b,
+    0 0 80px #ff3b3b;
+  animation: floatDollar 3s ease-in-out infinite;
+  z-index: 2;
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  .about-text-section {
+    margin-bottom: 100px !important;
+  }
+
+  .skills-section {
+    margin-top: 120px !important;
+  }
+}
+/* ==================== FOOTER ==================== */
+.footer-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+  gap: 60px;
+  flex-wrap: wrap;
+  background-color: black;
+}
+
+.footer-left img {
+  width: 100%;
+  max-width: 300px;
+  border: 2px solid red;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.footer-middle {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.circle-svg {
+  width: 100%;
+  height: 100%;
+  animation: rotate 10s linear infinite;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  fill: red;
+  cursor: pointer;
+  transition: font-size 0.3s ease;
+}
+
+.circle-svg:hover {
+  font-size: 18px;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.footer-block h3 {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.footer-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-block li {
+  color: white;
+  margin-bottom: 8px;
+}
+
+/* ==================== P5 + NOTAS ==================== */
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.notes2-overlay {
+  position: absolute;
+  top: 100vh;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ==================== TIPOGRAFÍA ==================== */
+@font-face {
+  font-family: 'Pagolla';
+  src: url('Pagolla-Regular.ttf') format('truetype');
+}
+
+/* ==================== FONDO SEGURO NEGRO ==================== */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: -2;
+}
+.footer-section {
+  background: black;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  gap: 30px;
+}
+
+.footer-column {
+  text-align: center;
+  color: white;
+}
+
+.footer-column h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 5px;
+}
+
+.social-link {
+  color: red;
+  text-decoration: none;
+}
+
+.nav-link {
+  color: red;
+  text-decoration: none;
+}
+
+.footer-circle {
+  width: 200px;
+  height: 200px;
+  animation: rotateCircle 20s linear infinite;
+}
+
+.footer-circle svg {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-circle text {
+  fill: red;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+@keyframes rotateCircle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.footer-circle {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+  animation: rotateCircle 20s linear infinite;
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer-circle:hover {
+  transform: scale(1.2);
+}
+
+@keyframes rotateCircle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
