@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact — Santiago</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+  <!-- ✅ Fondo de barras tipo Cherry -->
+  <canvas id="barsCanvas"></canvas>
+
+  <!-- Navbar -->
+  <div class="custom-navbar">
+    <div class="nav-item" onclick="location.href='index.html'">Home</div>
+    <div class="nav-item" onclick="location.href='about.html'">About</div>
+    <div class="nav-item" onclick="location.href='contact.html'">Contact</div>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="contact-wrapper">
+    <div class="clock" id="clock">Loading...</div>
+    <form class="contact-form">
+      <input type="text" placeholder="First Name" />
+      <input type="text" placeholder="Last Name" />
+      <input type="email" placeholder="Email" />
+      <textarea rows="5" placeholder="Your Message..."></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <!-- JS: Reloj -->
+  <script>
+    function updateClock() {
+      const clock = document.getElementById("clock");
+      const now = new Date();
+      const time = now.toLocaleTimeString('en-GB', { hour12: false });
+      const date = now.toLocaleDateString('en-GB');
+      clock.innerText = time + "\n" + date + "\nLONDON";
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+
+  <!-- JS: Barras -->
+  <script>
+    const canvas = document.getElementById("barsCanvas");
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let bars = [];
+    const barCount = Math.floor(canvas.width / 10);
+
+    for (let i = 0; i < barCount; i++) {
+      bars.push({
+        x: i * 10,
+        height: Math.random() * canvas.height,
+        speed: 2 + Math.random() * 3
+      });
+    }
+
+    function animateBars() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      bars.forEach(bar => {
+        bar.height += Math.sin(Date.now() * 0.002 + bar.x) * 3;
+        if (bar.height < 10) bar.height = 10;
+        ctx.fillStyle = "red";
+        ctx.fillRect(bar.x, canvas.height - bar.height, 8, bar.height);
+      });
+      requestAnimationFrame(animateBars);
+    }
+
+    animateBars();
+    window.addEventListener("resize", () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
+<!-- Footer -->
+  <section class="footer-section">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>SOCIALS.</h3>
+        <ul>
+          <li><a href="#" class="social-link">Instagram</a></li>
+          <li><a href="#" class="social-link">Facebook</a></li>
+          <li><a href="#" class="social-link">Dribbble</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-circle">
+        <svg viewBox="0 0 200 200">
+          <defs>
+            <path id="circlePath" d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0" />
+          </defs>
+          <text>
+            <textPath href="#circlePath" startOffset="0%">
+              • SOON TO THE TOP • SOON TO THE TOP • SOON TO THE TOP •
+            </textPath>
+          </text>
+        </svg>
+      </div>
+
+      <div class="footer-column">
+        <h3>NAV.</h3>
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  
+</body>
+</html>

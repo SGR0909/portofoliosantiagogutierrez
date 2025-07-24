@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portafolio Santiago</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- p5.js scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+  <script src="slime.js"></script>
+
+  <style>
+    @media (max-width: 768px) {
+      #main-section {
+        height: 100vh !important;
+        overflow: hidden !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SECCIÓN PRINCIPAL -->
+  <div id="main-section">
+    <div class="cherry-background">
+      <div class="cherry-bars">
+        <div class="bar" style="animation-delay: 0s;"></div>
+        <div class="bar" style="animation-delay: 0.1s;"></div>
+        <div class="bar" style="animation-delay: 0.2s;"></div>
+        <div class="bar" style="animation-delay: 0.3s;"></div>
+        <div class="bar" style="animation-delay: 0.4s;"></div>
+        <div class="bar" style="animation-delay: 0.5s;"></div>
+        <div class="bar" style="animation-delay: 0.6s;"></div>
+        <div class="bar" style="animation-delay: 0.7s;"></div>
+      </div>
+    </div>
+
+    <div class="custom-navbar">
+      <div class="nav-item" onclick="location.href='index.html'">Home</div>
+      <div class="nav-item" onclick="location.href='about.html'">About</div>
+      <div class="nav-item" onclick="location.href='contact.html'">Contact</div>
+    </div>
+
+    <img src="/santiago.png" alt="Santiago" class="santiago">
+
+    <div class="red-box">
+      <div class="icons">
+        <img src="/ps.png" alt="Ps" class="icon floating">
+        <img src="/ai.png" alt="Ai" class="icon floating">
+        <img src="/pr.png" alt="Pr" class="icon floating">
+      </div>
+      <img src="/characther.png" alt="Character" class="character floating">
+      <img src="/phrase.png" alt="Phrase" class="phrase">
+    </div>
+  </div>
+
+  <!-- SECCIÓN SET2 -->
+  <div class="set2-section">
+    <img src="/set2.png" alt="Set 2" class="set2-image">
+    <div id="sketch-container-2"></div>
+  </div>
+
+  <!-- SECCIÓN WORK -->
+  <section class="work-section">
+    <div id="slime-container"></div>
+
+    <div class="cherry-background work-background">
+      <div class="cherry-bars">
+        <div class="bar" style="animation-delay: 0s;"></div>
+        <div class="bar" style="animation-delay: 0.1s;"></div>
+        <div class="bar" style="animation-delay: 0.2s;"></div>
+        <div class="bar" style="animation-delay: 0.3s;"></div>
+        <div class="bar" style="animation-delay: 0.4s;"></div>
+        <div class="bar" style="animation-delay: 0.5s;"></div>
+        <div class="bar" style="animation-delay: 0.6s;"></div>
+        <div class="bar" style="animation-delay: 0.7s;"></div>
+      </div>
+    </div>
+
+    <img src="/worktop.png" class="work-top-title">
+
+    <!-- CARRUSEL AGREGADO -->
+    <div class="carousel-container">
+      <img src="imagenes/flechaizquierda.png" class="arrow left" onclick="moveSlide(-1)" alt="Flecha izquierda">
+
+      <div class="carousel-track">
+        <a href="work1.html" class="carousel-slide active">
+          <img src="/work1.png" alt="Trabajo 1">
+        </a>
+        <a href="work2.html" class="carousel-slide">
+          <img src="/work2.png" alt="Trabajo 2">
+        </a>
+        <a href="work3.html" class="carousel-slide">
+          <img src="/work3.png" alt="Trabajo 3">
+        </a>
+      </div>
+
+      <img src="/flecha.png" class="arrow right" onclick="moveSlide(1)" alt="Flecha derecha">
+    </div>
+  </section>
+
+  <!-- Notas flotantes -->
+  <div id="notesCanvas2-container" class="notes2-overlay"></div>
+  <script src="sketch2.js"></script>
+
+  <!-- FOOTER -->
+  <section class="footer-section">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>SOCIALS.</h3>
+        <ul>
+          <li><a href="#" class="social-link">Instagram</a></li>
+          <li><a href="#" class="social-link">Facebook</a></li>
+          <li><a href="#" class="social-link">Dribbble</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-circle">
+        <svg viewBox="0 0 200 200">
+          <defs>
+            <path id="circlePath" d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0" />
+          </defs>
+          <text>
+            <textPath href="#circlePath" startOffset="0%">
+              • SOON TO THE TOP • SOON TO THE TOP • SOON TO THE TOP •
+            </textPath>
+          </text>
+        </svg>
+      </div>
+
+      <div class="footer-column">
+        <h3>NAV.</h3>
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
